@@ -1,0 +1,91 @@
+*,::before,::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: 40px;
+    color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 90px;
+    margin-top: 70px;
+}
+.container {
+    height: auto;
+    width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 880px) {
+    .container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.box {
+    height: 200px;
+    width: 200px;
+    background: salmon;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.contLigne {
+    width: 60px;
+    height: 42px;
+    cursor: pointer;
+    position: relative;
+}
+.lignes {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #000;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.lignes:nth-child(1) {
+    top: 0px;
+}
+.lignes:nth-child(2) {
+    top: 18px;
+}
+.lignes:nth-child(3) {
+    top: 36px;
+}
+
+/* Croix basique */
+.btn1.active .lignes:nth-child(1){
+    top: 18px;
+    transform: rotate(135deg);
+}
+.btn1.active .lignes:nth-child(2){
+  transform: translateX(-20px);
+  opacity: 0;
+}
+.btn1.active .lignes:nth-child(3){
+    top: 18px;
+    transform: rotate(-135deg);
+}
+
+/* Croix droite */
+.btn2.active .lignes:nth-child(1) {
+   top: 18px; 
+}
+.btn2.active .lignes:nth-child(2) {
+    opacity: 0;
+}
+.btn2.active .lignes:nth-child(3) {
+    top: 18px;
+    transform: rotate(90deg); 
+}
