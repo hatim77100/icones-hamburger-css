@@ -89,3 +89,40 @@ h1 {
     top: 18px;
     transform: rotate(90deg); 
 }
+
+/* Rapprochement */
+
+.btn3.active .lignes:nth-child(1) {
+    top: 16px; 
+ }
+ .btn3.active .lignes:nth-child(2) {
+     opacity: 0;
+ }
+ .btn3.active .lignes:nth-child(3) {
+     top: 16px;
+    
+ }
+
+ /* care vers le bas */
+
+ .btn4 .lignes {
+    transition: all 0.25s ease-out;
+ } 
+ .btn4.active {
+    transform: rotate(90deg);
+ }
+ .btn4.active .lignes:nth-child(2) {
+    transition: none;
+    opacity: 0;
+}
+.btn4.active .lignes:nth-child(1),
+.btn4.active .lignes:nth-child(3){
+    width: 35px;
+    transform-origin: right;
+}
+.btn4.active .lignes:nth-child(1){
+    transform: translateY(20px) rotate(45deg);
+}
+.btn4.active .lignes:nth-child(3){
+    transform: translateY(-20px) rotate(-45deg);
+}
