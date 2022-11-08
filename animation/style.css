@@ -103,7 +103,7 @@ h1 {
     
  }
 
- /* care vers le bas */
+ /* caré vers le bas */
 
  .btn4 .lignes {
     transition: all 0.25s ease-out;
@@ -125,4 +125,75 @@ h1 {
 }
 .btn4.active .lignes:nth-child(3){
     transform: translateY(-20px) rotate(-45deg);
+}
+
+/*----Animation 5---------*/
+
+.lignesM {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #000;
+    transition: all 0.2s ease-in-out;
+    margin: 12px auto;
+}
+.lignesM:nth-child(1) {
+    margin-top: 0;
+}
+.btn5.active .lignesM:nth-child(2) {
+    width: 0px;
+}
+.btn5.active {
+    /* transition-delay: 0.3s; */
+    transition: all 0.2s 0.3s ease-in-out;
+    transform: rotate(45deg);
+}
+.btn5.active .lignesM:nth-child(1),
+.btn5.active .lignesM:nth-child(3) {
+    transition-delay: 0.3s;
+}
+.btn5.active .lignesM:nth-child(1) {
+    transform: translateY(18px);
+}
+.btn5.active .lignesM:nth-child(3) {
+    transform: translateY(-18px) rotate(90deg);
+}
+
+/*---- Animation Slide ---------*/
+
+.btn6.active .lignes:nth-child(1){
+    opacity: 0;
+    transform: translatex(-100%);
+}
+.btn6.active .lignes:nth-child(3) {
+    opacity: 0;
+    transform: translatex(100%);
+}
+
+/* ----- Animation 7 ------*/
+
+.btn7 .lignes:nth-child(1) {
+    top: 0px;
+}
+.btn7 .lignes:nth-child(2) {
+    top: 12px;
+}
+.btn7 .lignes:nth-child(3) {
+    top: 24px;
+}
+
+.btn7.active .lignes:nth-child(1) {
+    width: 30px;
+}
+.btn7.active .lignes:nth-child(2) {
+    width: 40px;
+}
+.btn7.active .lignes:nth-child(3) {
+    width: 50px;
+}
+.btn7 {
+    transition: all 0.4s ease-in-out;
+}
+.btn7.active {
+   transform: rotate(30deg); 
 }
