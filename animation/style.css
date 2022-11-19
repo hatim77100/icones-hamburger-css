@@ -197,3 +197,89 @@ h1 {
 .btn7.active {
    transform: rotate(30deg); 
 }
+
+/* Animation 8: Cercle*/
+
+.btn8 {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.btn8.active {
+    transform: rotate(45deg);
+}
+.btn8::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    transition: all 0.1s ease-in-out;
+}
+.btn8.active::before {
+    transition-delay: 0.3s !important;
+    border: 5px solid #000;
+}
+.btn8.active .lignes {
+    width: 35px;
+}
+.btn8.active .lignes:nth-child(2){
+    transition: all 0.1s ease-in !important;
+    opacity: 0; 
+}
+.btn8.active .lignes:nth-child(1) {
+    transform: translate(12.5px, 18px);
+}
+.btn8.active .lignes:nth-child(3) {
+    transform: translate(12.5px, -18px) rotate(90deg);
+}
+
+/*-----Animation9: Apparition ------*/
+
+.btn9.active {
+   animation: smallBig 0.4s forwards; 
+}
+
+@keyframes smallBig {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.btn9.active .lignes:nth-child(2) {
+    opacity: 0;
+}
+.btn9.active .lignes:nth-child(1) {
+    transform: translateY(18px) rotate(45deg);
+}
+
+.btn9.active .lignes:nth-child(3) {
+    transform: translateY(-18px) rotate(-45deg);
+}
+
+/*----- Animation:10 Toupie -----*/
+
+.btn10.active {
+    transition: all 0.3s;
+    transform: rotate(180deg);
+}
+.btn10.active .lignes {
+    transition: all 0.1s;
+}
+.btn10.active .lignes:nth-child(1) {
+   transform: translateY(18px) rotate(45deg); 
+}
+.btn10.active .lignes:nth-child(2) {
+   opacity: 0;
+}
+.btn10.active .lignes:nth-child(3) {
+   transform: translateY(-18px) rotate(-45deg); 
+}
